@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Restaurant Analytics Platform
 
-## Getting Started
+A comprehensive analytics platform for restaurants to optimize menu pricing, forecast inventory, and visualize sales data.
 
-First, run the development server:
+## Setup Instructions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Frontend Setup
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Install Node.js dependencies:
+   ```
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Run the development server:
+   ```
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Backend Setup
 
-## Learn More
+1. Create a Python virtual environment:
+   ```
+   python -m venv venv
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Activate the virtual environment:
+   - Windows: `venv\Scripts\activate`
+   - Mac/Linux: `source venv/bin/activate`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Install dependencies:
+   ```
+   pip install -e backend/
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Run the FastAPI server:
+   ```
+   cd backend
+   uvicorn main:app --reload
+   ```
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Menu Price Optimization**: Analyze sales data to suggest optimal pricing
+- **Inventory Forecasting**: Predict inventory needs based on historical usage
+- **Sales Visualization**: Interactive charts and graphs for sales analysis
+- **Data Upload**: Easy CSV upload for your restaurant data
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies Used
+
+- **Frontend**: Next.js, React, TailwindCSS
+- **Backend**: FastAPI, pandas, scikit-learn, statsmodels
+- **Data Visualization**: Custom React components
